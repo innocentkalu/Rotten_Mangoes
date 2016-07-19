@@ -10,7 +10,8 @@ class Review < ApplicationRecord
 
   validates :text,
     presence: true
-
+  validates :rating_out_of_ten,
+    presence: true
   validates :rating_out_of_ten,
     numericality: { only_integer: true }
   validates :rating_out_of_ten,
