@@ -1,0 +1,14 @@
+<% @movies.each do |movie| %>
+  <div class="movie">
+    <div class="picture"><%= link_to image_tag(movie.poster_image_url), movie_path(movie) %></div>
+    <%= link_to image_tag(movie.image), movie_path(movie) %>
+    <div class="movie_info">
+      <h2><%= link_to movie.title, movie_path(movie) %></h2>
+      <h3>Release Date: <%= formatted_date(movie.release_date) %></h3>
+      <h4>Director: <%= movie.director %> </h4>
+      <h4>Run Time: <%= movie.runtime_in_minutes %> minutes</h4>
+      <p><%= movie.description %></p><br>
+    </div>>
+  </div> 
+<% end %> 
+

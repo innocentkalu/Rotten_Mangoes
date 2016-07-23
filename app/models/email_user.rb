@@ -1,0 +1,2 @@
+class EmailUser < ApplicationRecord
+end

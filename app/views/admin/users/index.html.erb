@@ -1,0 +1,9 @@
+<%= link_to "Back to all movies", movies_path %><br>
+<%= link_to "Create New User", new_admin_user_path %><br>
+<hr>
+<%= paginate@users %>
+<p><strong>Full Name,&nbsp;&nbsp; Email Address</strong> </p><br>
+<% @users.each do |user| %>
+
+  <%= link_to "#{user.full_name}, #{user.email}", admin_user_path(user) %><br><br>
+<% end %>
